@@ -37,3 +37,12 @@ body{
 .navbar ul li:hover::after{
     width: 100%;
 }
+fieldset{
+    align-items: center;
+    border: none;
+    display: flex;
+    flex-direction: row;
+    padding-left: 550px;
+    gap: 20px;
+    background-color: lightgrey;
+}
