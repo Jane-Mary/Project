@@ -1,15 +1,18 @@
 body{
     background-color: #dad2d2;
+    overflow-x: hidden;
 }
 
 .navbar{
-    width: 85%;
+    width: 100%;
     margin: auto;
-    padding: 25px 0;
-    padding-left: 100px;
+    padding: 25px 0 0 100px;
     display: flex;
     align-items: center;
     justify-content: space-between;
+    position: sticky;
+    top: 0;
+    background-color:rgb(204, 193, 193);
 }
 .navbar ul li{
     list-style: none;
@@ -23,6 +26,7 @@ body{
     text-transform: uppercase;
     font-size: large;
     font-family: sans-serif;
+    margin-left: 20px;
 }
 .navbar ul li a #liv{
     outline-style:dotted;
@@ -32,7 +36,7 @@ body{
     content: '';
     height: 3px;
     width: 0;
-    background: #009688;
+    background:white;
     position: absolute;
     left: 0;
     bottom: -10px;
@@ -54,16 +58,27 @@ body{
     object-fit: cover;
     cursor: pointer;
     transition: 0.2s ease;
+    border-radius: 10px;
 }
 .item img:hover{
     transform: scale(1.04);
 }
 fieldset{
-    align-items: center;
     border: none;
-    display: flex;
-    flex-direction: row;
-    padding-left: 550px;
-    gap: 20px;
-    background-color: lightgrey;
+    font-family: sans-serif;
+    background-color:rgb(204, 193, 193);
 }
+fieldset div{
+    text-align: center;
+    margin-top:10px;
+    }
+    fieldset.footer section{
+        display: grid;
+        grid-template-columns: auto auto auto auto;
+        justify-content: center;
+        gap: 20px;
+        
+    }
+    footer fieldset.footer section a:hover{
+        transform: scale(1.2);
+    }

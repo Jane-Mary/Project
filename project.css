@@ -9,7 +9,7 @@
     background: url('./Defence/Images/background-photo.jpg');
     background-size: cover;
     background-position: center;
-    background: linear-gradient(rgba(0 0 0 0.5) rgba(0 0 0 0.5)),url('./Defence/Images/background-photo.jpg');
+    background-color:linear;
     
 }
 .navbar{
@@ -38,17 +38,15 @@
     content: '';
     height: 3px;
     width: 0;
-    background: #009688;
+    background:white;
     position: absolute;
     left: 0;
     bottom: -10px;
     transition: 0.5s;
+    text-decoration-line: underline;
 }
-.navbar ul li:hover{
+.navbar ul li:hover::after{
     width: 100%;
-    background-color: lightgrey;
-    border-radius: 2px;
-    display: inline;
 }
 .content{
     width: 100%;
@@ -68,12 +66,17 @@
     line-height: 25px;
     
 }
-fieldset{
-    align-items: center;
-    border: none;
-    display: flex;
-    flex-direction: row;
-    padding-left: 550px;
+fieldset div{
+text-align: center;
+margin-top:10px;
+}
+fieldset.footer section{
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: center;
     gap: 20px;
-    background-color: lightgrey;
+    
+}
+footer fieldset.footer section a:hover{
+    transform: scale(1.2);
 }
