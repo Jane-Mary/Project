@@ -41,6 +41,9 @@ body{
 .navbar ul li:hover::after{
     width: 100%;
 }
+.navbar ul li.bed::after{
+    width: 120%;
+}
  .items {
 display: grid;
 grid-template-columns: repeat(3,1fr);

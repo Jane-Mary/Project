@@ -40,8 +40,11 @@ body{
     transition: 0.5s;
 }
 .navbar ul li:hover::after{
-    width: 100%;}
-    
+    width: 100%;
+}
+.navbar ul li.kit::after{
+    width: 120%;
+}    
 .items{
     display: grid;
     grid-template-columns: repeat(3,1fr);
