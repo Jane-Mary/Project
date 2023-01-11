@@ -1,0 +1,13 @@
+ body{
+    background-color: grey;
+ }
+ .info{
+    margin: auto;
+    width: 250px;
+    height: 200px;
+    background-color: lightgrey;
+    border-radius: 10px;
+    padding: 25px 0px 0px 20px;
+    align-items: center;
+    margin-top: 70px;    
+}

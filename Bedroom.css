@@ -1,6 +1,16 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,700;1,500;1,700&family=Poppins:wght@300&display=swap');
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
 body{
     background-color:whitesmoke;
     overflow-x: hidden;
+    font-family: 'Montserrat', sans-serif;font-weight: 700;
+
 }
 
 .navbar{
@@ -12,7 +22,7 @@ body{
     justify-content: space-between;
     position: sticky;
     top: 0;
-    background-color: lightgrey;
+    background-color: rgb(175, 173, 173);
 }
 .navbar ul li{
     list-style: none;
@@ -22,7 +32,7 @@ body{
 }
 .navbar ul li a{
     text-decoration: none;
-    color: whitesmoke;
+    color:white;
     text-transform: uppercase;
     font-size: large;
     font-family: sans-serif;
@@ -59,13 +69,43 @@ grid-row-gap:30px;
     transition: 0.2s ease;
     border-radius: 10px;
 }
+.item h3{
+    text-align: center;
+}
 .item img:hover {
     transform: scale(1.04)
+}
+footer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+    
+    font-family: sans-serif;
+    background-color:rgb(175, 173, 173);
+}
+footer .right {
+    margin-left:30%;
+} 
+footer .right div input{
+    margin: 0.4rem 0;
+    border-radius: 5px;
+}
+footer  .left {
+    display: grid;
+    text-align: center;
+    justify-content: center;
+    
+}
+footer .left p span{
+    margin-right: 10px;
+}
+footer .right div button{
+    cursor: pointer;
 }
 fieldset{
     border: none;
     font-family: sans-serif;
-    background-color: lightgrey;
+    background-color:rgb(175, 173, 173);
 }
 fieldset div{
     text-align: center;
