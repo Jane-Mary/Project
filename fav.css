@@ -1,19 +1,12 @@
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,700;1,500;1,700&family=Poppins:wght@300&display=swap');
-.material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 48
-}
-body{
-    background-color:whitesmoke;
+body {
+    background-color: whitesmoke;
     overflow-x: hidden;
-    font-family: 'Montserrat', sans-serif;font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
 
 }
 
-.navbar{
+.navbar {
     width: 100%;
     margin: auto;
     padding: 0 0 0 14em;
@@ -24,13 +17,15 @@ body{
     top: 0;
     background-color: lightgrey;
 }
-.navbar ul li{
+
+.navbar ul li {
     list-style: none;
     display: inline-block;
     margin: 0 20px;
     position: relative;
 }
-.navbar ul li a{
+
+.navbar ul li a {
     text-decoration: none;
     color: white;
     text-transform: uppercase;
@@ -38,7 +33,8 @@ body{
     font-family: sans-serif;
     margin-left: 20px;
 }
-.navbar ul li::after{
+
+.navbar ul li::after {
     content: '';
     height: 3px;
     width: 0;
@@ -48,40 +44,15 @@ body{
     bottom: -10px;
     transition: 0.5s;
 }
-.navbar ul li:hover::after{
+
+.navbar ul li:hover::after {
     width: 100%;
 }
-.navbar ul li.din::after{
+
+.navbar ul li.din::after {
     width: 120%;
 }
-.items{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    padding: 30px 20px;
-    grid-column-gap: 20px;
-    grid-row-gap: 30px;
-}
-.items .item .icon-class{
-    position:inherit;
-    font-size: 1.5em;
-    color: black;
-    margin-left:16em;
-}
-.item img{
-    width: 100%;
-    height: 300px;
-    object-fit: cover;
-    cursor: pointer;
-    transition: 0.2s ease;
-    border-radius: 10px;
-    -webkit-box-reflect: below 1px linear-gradient(transparent,transparent,#0005);
-}
-.item h3{
-    text-align: center;
-}
-.item img:hover{
-    transform: scale(1.04);
-}
+
 footer {
     display: grid;
     place-items: center;
@@ -107,3 +78,44 @@ fieldset.footer section{
     footer fieldset.footer section a:hover{
         transform: scale(1.2);
     }
+/* Style The Dropdown Button
+.dropbtn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+
+Dropdown Content (Hidden by Default)
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+/* .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+/* Change color of dropdown links on hover */
+
+/* Show the dropdown menu on hover */
+/* .dropdown:hover .dropdown-content {
+    display: block;
+} */
+
+/* Change the background color of the dropdown button when the dropdown content is shown */
+/* .dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+} */
+

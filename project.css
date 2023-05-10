@@ -10,14 +10,15 @@
     background-size: cover;
     background-position: center;
     background-color:linear;
+    overflow: hidden;
 }
-.navbar{
+.navbar {
     width: 85%;
-    margin: auto;
+    margin: 0 0 0 25em;
     padding: 25px 0;
-    padding-left: 100px;
+    /* padding-left: 100px; */
     display: flex;
-    align-items: center;
+    align-items: end;
     justify-content: space-between;
 }
 .navbar ul li{
@@ -65,12 +66,13 @@
     margin: 20px auto;
     font-weight: 100;
     line-height: 25px;
-    font-size: x-large;
-    
+    font-size: x-large; 
 }
+
 fieldset div{
 text-align: center;
 margin-top:10px;
+border-radius: 10px;
 }
 fieldset.footer section{
     display: grid;

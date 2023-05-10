@@ -16,7 +16,7 @@ body{
 .navbar{
     width: 100%;
     margin: auto;
-    padding: 25px 0 0 100px;
+    padding: 0 0 0 14em;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -62,6 +62,12 @@ body{
     grid-column-gap: 20px;
     grid-row-gap:30px ;
 }
+.items .item .icon-class{
+    position:inherit;
+    font-size: 1.5em;
+    color: black;
+    margin-left:16em;
+}
 .item h3{
     text-align: center;
 }
@@ -72,38 +78,19 @@ body{
     cursor: pointer;
     transition: 0.2s ease;
     border-radius: 10px;
+    -webkit-box-reflect: below 1px linear-gradient(transparent,transparent,#0005);
 }
 .item img:hover{
     transform: scale(1.04);
 }
 footer {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    place-items: center;
     gap: 20px;
-    
     font-family: sans-serif;
     background-color:rgb(175, 173, 173);
 }
-footer .right {
-    margin-left:30%;
-} 
-footer .right div input{
-    margin: 0.4rem 0;
-    border-radius: 5px;
-}
-footer  .left {
-    display: grid;
-    text-align: center;
-    justify-content: center;
-    
-}
-footer .left p span{
-    margin-right: 10px;
-}
-footer .right div button{
-    cursor: pointer;
-}
-fieldset{
+fieldset {
     border: none;
     font-family: sans-serif;
     background-color:rgb(175, 173, 173);

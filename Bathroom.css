@@ -1,38 +1,43 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,500;0,700;1,500;1,700&family=Poppins:wght@300&display=swap');
+
 .material-symbols-outlined {
-  font-variation-settings:
-  'FILL' 0,
-  'wght' 400,
-  'GRAD' 0,
-  'opsz' 48
+    font-variation-settings:
+        'FILL' 0,
+        'wght' 400,
+        'GRAD' 0,
+        'opsz' 48
 }
-body{
+
+body {
     background-color: whitesmoke;
     overflow-x: hidden;
-    color:black;
-    font-family: 'Montserrat', sans-serif;font-weight: 700;
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
 
 }
 
-.navbar{
+.navbar {
     width: 100%;
     margin: auto;
-    padding: 25px 0 0 100px; 
+    padding: 0 0 0 14em;
     display: flex;
     align-items: center;
     justify-content: space-between;
     position: sticky;
     top: 0;
-    background-color:lightgrey;
+    background-color: lightgrey;
     border-radius: 10px;
 }
-.navbar ul li{
+
+.navbar ul li {
     list-style: none;
     display: inline-block;
     margin: 0 20px;
     position: relative;
 }
-.navbar ul li a{
+
+.navbar ul li a {
     text-decoration: none;
     color: white;
     text-transform: uppercase;
@@ -41,95 +46,90 @@ body{
     margin-left: 20px;
 }
 
-.navbar ul li::after{
+.navbar ul li::after {
     content: '';
     height: 3px;
     width: 0;
-    background:white;
+    background: white;
     position: absolute;
     left: 0;
     bottom: -10px;
     transition: 0.5s;
 }
-.navbar ul li:hover::after{
+
+.navbar ul li:hover::after {
     width: 100%;
 }
-.navbar ul li.bath::after{
+
+.navbar ul li.bath::after {
     width: 120%;
 }
-.items{
+
+.items {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(3, 1fr);
     padding: 30px 20px;
     grid-column-gap: 20px;
-    grid-row-gap:30px ;
+    grid-row-gap: 30px;
 }
-.item img{
+.items .item .icon-class{
+    position:inherit;
+    font-size: 1.5em;
+    color: black;
+    margin-left:16em;
+}
+.item img {
     width: 100%;
     height: 300px;
     object-fit: cover;
     cursor: pointer;
     transition: 0.2s ease;
     border-radius: 10px;
+    -webkit-box-reflect: below 1px linear-gradient(transparent,transparent,#0005);
 }
+
 .item a {
 
     text-align: center;
     font-weight: 700;
     margin-left: 50%;
-    font-family: 'Montserrat', sans-serif;font-weight: 700;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
 }
-.item img:hover{
+
+.item img:hover {
     transform: scale(1.04);
 }
-.item h3{
+
+.item h3 {
     text-align: center;
 }
+
 footer {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    place-items: center;
     gap: 20px;
-    
     font-family: sans-serif;
-    background-color:rgb(175, 173, 173);
-}
-footer .right {
-    margin-left:30%;
-} 
-footer .right div input{
-    margin: 0.4rem 0;
-    border-radius: 5px;
-}
-footer  .left {
-    display: grid;
-    text-align: center;
-    justify-content: center;
-    
-}
-footer .left p span{
-    margin-right: 10px;
-}
-footer .right div button{
-    cursor: pointer;
+    background-color: rgb(175, 173, 173);
 }
 
- 
-
-
-fieldset{
+fieldset {
     border: none;
 }
-fieldset div{
+
+fieldset div {
     text-align: center;
-    margin-top:10px;
-    }
-    fieldset.footer section{
-        display: grid;
-        grid-template-columns: auto auto auto auto;
-        justify-content: center;
-        gap: 20px;
-        
-    }
-    footer fieldset.footer section a:hover{
-        transform: scale(1.2);
-    }
+    margin-top: 10px;
+}
+
+fieldset.footer section {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    justify-content: center;
+    gap: 40px;
+
+}
+
+footer fieldset.footer section a:hover {
+    transform: scale(1.2);
+}
