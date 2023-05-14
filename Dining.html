@@ -14,23 +14,29 @@
         rel="stylesheet">
     <title>Dining</title>
     <link rel="stylesheet" href="Dining.css">
+    <link rel="stylesheet" href="./Mobile/mobile.css">
 </head>
 
 <body>
     <div class="banner">
-        <div class="navbar">
-            <ul>
-                <li><a href="project.html">Home</a></li>
-                <li><a href="Living room.html">Living room</a></li>
-                <li><a href="Bedroom.html">Bedroom</a></li>
-                <li class="din"><a href="Dining.html">Dining</a></li>
-                <li><a href="Kitchen.html">Kitchen</a></li>
-                <li><a href="Bathroom.html">Bathroom</a></li>
-                <li><a href="fav.html">Favourites</a></li>
-            </ul>
-        </div>
-        <section class="items">
-            <div class="item">
+        <header>
+            <div class="navigation">
+                <input type="checkbox" class="toggle-menu">
+                <div class="hamburger"> <img src="./mobile/menu.png" alt="menu"> </div>
+                <ul class="menu">
+                    <li><a href="project.html">Home</a></li>
+                    <li class="liv"><a href="Living room.html">Living room</a></li>
+                    <li><a href="Bedroom.html">Bedroom</a></li>
+                    <li><a href="Dining.html">Dining</a></li>
+                    <li><a href="Kitchen.html">Kitchen</a></li>
+                    <li><a href="Bathroom.html">Bathroom</a></li>
+                    <li><a href="fav.html">Favourites</a></li>
+                </ul>
+            </div>
+        </header>
+        <section id="items">
+        </section>
+        <!-- <div class="item">
                 <img src="./Defence/Images/din1.jpg">
                 <span class="icon-class">
                     <ion-icon name="bookmark"></ion-icon>
@@ -110,9 +116,10 @@
                 <h3>Price:90,000frs</h3>
                 <h3>Location:Bamenda</h3>
                 <h3>Shop Location:Commercial avenue shed 275</h3>
-            </div>
-        </section>
-        <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+            </div> -->
+    </div>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script src="dining.js"></script>
 </body>
 <footer>
     <fieldset class="footer">

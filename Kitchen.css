@@ -55,7 +55,7 @@ body{
 .navbar ul li.kit::after{
     width: 120%;
 }    
-.items{
+#items{
     display: grid;
     grid-template-columns: repeat(3,1fr);
     padding: 30px 20px;
