@@ -54,3 +54,27 @@ let bath = [
         image:'./Defence/Images/bathroom9.jpg'
     }
 ]
+
+function createImages(){
+    let added_img = 0
+
+    bath.forEach(img => {
+        if (added_img <= bath.length){
+            input_element.innerHTML += `<div class="item">
+            <div class = 'profile'>
+            <img src='${img.image}' alt='profile'></div>
+            <span>
+            <ion-icon name="bookmark"></ion-icon>
+        </span>
+            <h3>Price:${img.price}</h3>
+            <h3>location:${img.location}</h3>
+            <h3>Shop Location:${img.shop}</h3>
+            </div>`
+
+        }
+        
+    })
+    added_image++
+}
+createImages()
+

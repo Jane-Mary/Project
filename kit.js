@@ -1,3 +1,4 @@
+const input_element = document.querySelector('.items')
 let kit = [
     {
         name:'kit1',
@@ -54,3 +55,27 @@ let kit = [
         image:'./Defence/Images/kitchen9.jpg'
     },
 ]
+
+function createImages(){
+    let added_img = 0
+
+    kit.forEach(img => {
+        if (added_img <= kit.length){
+            input_element.innerHTML += `<div class="item">
+            <div class = 'profile'>
+            <img src='${img.image}' alt='profile'></div>
+            <span>
+            <ion-icon name="bookmark"></ion-icon>
+        </span>
+            <h3>Price:${img.price}</h3>
+            <h3>location:${img.location}</h3>
+            <h3>Shop Location:${img.shop}</h3>
+            </div>`
+
+        }
+        
+    })
+    added_image++
+}
+createImages()
+
