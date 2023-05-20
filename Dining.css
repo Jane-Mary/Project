@@ -76,8 +76,9 @@ body{
     border-radius: 10px;
     -webkit-box-reflect: below 1px linear-gradient(transparent,transparent,#0005);
 }
-.item h3{
+h3{
     text-align: center;
+    font-size: 21px;
 }
 .item img:hover{
     transform: scale(1.04);

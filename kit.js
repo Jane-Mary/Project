@@ -85,25 +85,34 @@ function createImages(){
         
 //     })
 //     added_image++
-for (let index = 0; index < kit.length; index++) {
-    let div = input_element.appendChild(document.createElement('div'))
-        .appendChild(document.createElement('div'))
-    div.innerHTML = `<img src='${kit[index].image}' alt='profile'>`
-    let span = document.createElement('span')
-    let h3 = document.createElement('h3') 
-    h3.innerHTML = `Price:${kit[index].price} 
-    location:${kit[index].location}
-    Shop Location:${kit[index].shop}  `
-    span.appendChild(document.createElement('ion-icon'))
-    let h32 = div.insertAdjacentElement('afterend', h3)
-    let span2 = div.insertAdjacentElement('afterend', span)
-    span2.innerHTML = `<ion-icon name="bookmark"></ion-icon>`
-     div.classList.add('item')
-     
-     span.addEventListener('click', e =>{
-        span.style.color = 'white'
-       
 
+for (let index = 0; index < kit.length; index++) {
+    let names = kit[index].name;
+    let div = input_element.appendChild(document.createElement('div'))
+    //.appendChild(document.createElement('div'))
+    let div2 = div.appendChild(document.createElement('div'));
+    div.setAttribute('id', names)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+    div2.innerHTML = `<img src='${kit[index].image}' alt='profile'>`
+    let span = document.createElement('span')
+    let h3 = document.createElement('h3')
+    let h2 = document.createElement('h3')
+    let h4 = document.createElement('h3')
+    h2.setAttribute('id', 'price')
+    h2.innerHTML = `Price:${kit[index].price}`
+    h3.innerHTML = ` location:${kit[index].location}`
+    h4.innerHTML = `Shop Location:${kit[index].shop}  `
+    span.appendChild(document.createElement('ion-icon'))
+    let h44 = div2.insertAdjacentElement('afterend', h4)
+    let h32 = div2.insertAdjacentElement('afterend', h3)
+    let h22 = div2.insertAdjacentElement('afterend', h2)
+    let span2 = div2.insertAdjacentElement('afterend', span)
+    span2.innerHTML = `<ion-icon name="bookmark"></ion-icon>`
+   div.classList.add('item')
+
+         
+         div.addEventListener('click', e =>{
+             span.style.color = 'white'
+            
     })
 }
 

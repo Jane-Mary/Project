@@ -66,7 +66,7 @@ body{
     grid-row-gap:30px ;
 }
 
-#items .item .icon-class{
+.items .item .icon-class{
     position:inherit;
     font-size: 1.5em;
     color: black;
@@ -82,9 +82,9 @@ body{
     -webkit-box-reflect: below 1px linear-gradient(transparent,transparent,#0005);
 }
 
-.item h3{
+h3{
     text-align: center;
-    padding-top: 0;
+    font-size: 21px;
 } 
 .item img:hover{
     transform: scale(1.04);

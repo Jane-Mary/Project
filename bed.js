@@ -85,25 +85,33 @@ function createImages(){
         
     // })
     // added_image++
-    for (let index = 0; index <bed.length; index++) {
+    for (let index = 0; index < bed.length; index++) {
+        let names = bed[index].name;
         let div = input_element.appendChild(document.createElement('div'))
-            .appendChild(document.createElement('div'))
-        div.innerHTML = `<img src='${bed[index].image}' alt='profile'>`
+        //.appendChild(document.createElement('div'))
+        let div2 = div.appendChild(document.createElement('div'));
+        div.setAttribute('id', names)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+        div2.innerHTML = `<img src='${bed[index].image}' alt='profile'>`
         let span = document.createElement('span')
-        let h3 = document.createElement('h3') 
-        h3.innerHTML = `Price:${bed[index].price} 
-        location:${bed[index].location}
-        Shop Location:${bed[index].shop}  `
+        let h3 = document.createElement('h3')
+        let h2 = document.createElement('h3')
+        let h4 = document.createElement('h3')
+        h2.setAttribute('id', 'price')
+        h2.innerHTML = `Price:${bed[index].price}`
+        h3.innerHTML = ` location:${bed[index].location}`
+        h4.innerHTML = `Shop Location:${bed[index].shop}  `
         span.appendChild(document.createElement('ion-icon'))
-        let h32 = div.insertAdjacentElement('afterend', h3)
-        let span2 = div.insertAdjacentElement('afterend', span)
+        let h44 = div2.insertAdjacentElement('afterend', h4)
+        let h32 = div2.insertAdjacentElement('afterend', h3)
+        let h22 = div2.insertAdjacentElement('afterend', h2)
+        let span2 = div2.insertAdjacentElement('afterend', span)
         span2.innerHTML = `<ion-icon name="bookmark"></ion-icon>`
-         div.classList.add('item')
+       div.classList.add('item')
 
-
-         span.addEventListener('click', e =>{
-            span.style.color = 'white'
-           
+             
+             div.addEventListener('click', e =>{
+                 span.style.color = 'white'
+                
 
         })
     }

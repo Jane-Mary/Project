@@ -101,8 +101,9 @@ body {
     transform: scale(1.04);
 }
 
-.item h3 {
+h3 {
     text-align: center;
+    font-size: 21px;
 }
 
 footer {

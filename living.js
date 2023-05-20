@@ -78,29 +78,63 @@ function createImages() {
     //     //     <h3>location:${img.location}</h3>
     //     //     <h3>Shop Location:${img.shop}</h3>
     //     //     </div>`
-        
+
     //     }
-        for (let index = 0; index < liv.length; index++) {
+    for (let index = 0; index < liv.length; index++) {
+        let names = liv[index].name;
         let div = input_element.appendChild(document.createElement('div'))
-            .appendChild(document.createElement('div'))
-        div.innerHTML = `<img src='${liv[index].image}' alt='profile'>`
+        //.appendChild(document.createElement('div'))
+        let div2 = div.appendChild(document.createElement('div'));
+        div.setAttribute('id', names)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
+        div2.innerHTML = `<img src='${liv[index].image}' alt='profile'>`
         let span = document.createElement('span')
-        let h3 = document.createElement('h3') 
-        h3.innerHTML = `Price:${liv[index].price} 
-        location:${liv[index].location}
-        Shop Location:${liv[index].shop}  `
+        let h3 = document.createElement('h3')
+        let h2 = document.createElement('h3')
+        let h4 = document.createElement('h3')
+        h2.setAttribute('id', 'price')
+        h2.innerHTML = `Price:${liv[index].price}`
+        h3.innerHTML = ` location:${liv[index].location}`
+        h4.innerHTML = `Shop Location:${liv[index].shop}  `
         span.appendChild(document.createElement('ion-icon'))
-        let h32 = div.insertAdjacentElement('afterend', h3)
-        let span2 = div.insertAdjacentElement('afterend', span)
+        let h44 = div2.insertAdjacentElement('afterend', h4)
+        let h32 = div2.insertAdjacentElement('afterend', h3)
+        let h22 = div2.insertAdjacentElement('afterend', h2)
+        let span2 = div2.insertAdjacentElement('afterend', span)
         span2.innerHTML = `<ion-icon name="bookmark"></ion-icon>`
-         div.classList.add('item')
-             
-             span.addEventListener('click', e =>{
-                 span.style.color = 'white'
-                
-            
-             })
-                                                                    
+       div.classList.add('item')
+
+        div.addEventListener('click', e => {
+            span.style.color = 'white'
+        //     let price = document.getElementById('price').value
+        //    console.log(price);
+        // let price = liv[index].price
+        // let location = liv[index].location
+        // let shop = liv[index].shop
+if(typeof (Storage) != "undefined"){
+        let picture=[]
+          let user = {
+            img : liv[index].image,
+            price : liv[index].price,
+            location : liv[index].location,
+            shop : liv[index].shop
+          }
+           picture.push(user)
+           localStorage.setItem('picture',JSON.stringify(picture))
+        }
+            // if(names == liv[index].name){
+            //     localStorage.setItem('picture', names)   
+            // }
+            // if(price == liv[index].price ){
+            //     localStorage.setItem('picture', price)
+            // }
+            // if( location == liv[index].location){
+            //     localStorage.setItem('picture', location)
+            // }
+            //  if( shop == liv[index].shop){
+            //      localStorage.setItem('picture', shop)
+            //  }
+        })
+
     }
 }
 createImages()
