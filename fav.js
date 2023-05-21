@@ -31,8 +31,11 @@ for (let index = 0; index < b.length; index++) {
         span2.style.color = "red";
         let liv8 = b.find(b => b.name === id);
         if (liv8) {
-           b.shift(liv8);
+           b.splice(index, 1);
            localStorage.setItem("Favorites", JSON.stringify(b));
+           setTimeout(() => {
+        location.reload();
+           }, 3000);
            
 
         
