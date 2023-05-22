@@ -6,7 +6,7 @@
 .banner{
     width: 100%;
     height: 100vh;
-    background: url('./Defence/Images/background-photo.jpg');
+    background:url('./Defence/Images/background-photo.jpg');
     background-size: cover;
     background-position: center;
     background-color:linear;

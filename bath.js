@@ -65,57 +65,55 @@ let bath = [
     }
 ]
 
-function createImages() {
-    // let added_img = 0
+for (let index = 0; index < bath.length; index++) {
+    let names = bath[index].name;
+    let div = input_element.appendChild(document.createElement("div"));
+    //.appendChild(document.createElement('div'))
+    let div2 = div.appendChild(document.createElement("div"));
+    div.setAttribute("id", names);
+    div2.innerHTML = `<img src='${bath[index].image}' alt='profile'>`;
+    let span = document.createElement("span");
+    let h3 = document.createElement("h3");
+    let h2 = document.createElement("h3");
+    let h4 = document.createElement("h3");
+    h2.setAttribute("id", "price");
+    h2.innerHTML = `Price:${bath[index].price}`;
+    h3.innerHTML = ` location:${bath[index].location}`;
+    h4.innerHTML = `Shop Location:${bath[index].shop}  `;
+    // span.appendChild(document.createElement("ion-icon"));
+    let h44 = div2.insertAdjacentElement("afterend", h4);
+    let h32 = div2.insertAdjacentElement("afterend", h3);
+    let h22 = div2.insertAdjacentElement("afterend", h2);
+    let span2 = div2.insertAdjacentElement("afterend", span);
+    span2.setAttribute("id", names)
+    span2.innerHTML = `<ion-icon name="bookmark"></ion-icon>`;
+    div.classList.add("item");
 
-    // bath.forEach(img => {
-    //     if (added_img <= bath.length) {
-    //         input_element.innerHTML += `<div class="item">
-    //         <div class = 'profile'>
-    //         <img src='${img.image}' alt='profile'></div>
-    //         <span>
-    //         <ion-icon name="bookmark"></ion-icon>
-    //     </span>
-    //         <h3>Price:${img.price}</h3>
-    //         <h3>location:${img.location}</h3>
-    //         <h3>Shop Location:${img.shop}</h3>
-    //         </div>`
 
-    //     }
-
-    // })
-    // added_image++
-    for (let index = 0; index < bath.length; index++) {
-        let names = bath[index].name;
-        let div = input_element.appendChild(document.createElement('div'))
-        //.appendChild(document.createElement('div'))
-        let div2 = div.appendChild(document.createElement('div'));
-        div.setAttribute('id', names)                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     
-        div2.innerHTML = `<img src='${bath[index].image}' alt='profile'>`
-        let span = document.createElement('span')
-        let h3 = document.createElement('h3')
-        let h2 = document.createElement('h3')
-        let h4 = document.createElement('h3')
-        h2.setAttribute('id', 'price')
-        h2.innerHTML = `Price:${bath[index].price}`
-        h3.innerHTML = ` location:${bath[index].location}`
-        h4.innerHTML = `Shop Location:${bath[index].shop}  `
-        span.appendChild(document.createElement('ion-icon'))
-        let h44 = div2.insertAdjacentElement('afterend', h4)
-        let h32 = div2.insertAdjacentElement('afterend', h3)
-        let h22 = div2.insertAdjacentElement('afterend', h2)
-        let span2 = div2.insertAdjacentElement('afterend', span)
-        span2.innerHTML = `<ion-icon name="bookmark"></ion-icon>`
-       div.classList.add('item')
-
-             
-             div.addEventListener('click', e =>{
-                 span.style.color = 'white'
-                
-           
-
+         
+            span2.addEventListener("click", function (e) {
+                e.preventDefault();
+                let id = e.target.parentElement.id;
+                span2.style.color = "white";
+                console.log(id);
+               let bath8 = bath.find(bath => bath.name === id);
+               if (bath8) {
+                if (localStorage.getItem("Favorites") == null){
+                    let favorites = [];
+                    favorites.push(bath8);
+                localStorage.setItem('Favorites', JSON.stringify(favorites));
+        
+        
+               }
+               else {
+               let a = localStorage.getItem('Favorites')
+               let b = JSON.parse(a)
+                b.push(bath8);
+                localStorage.setItem('Favorites', JSON.stringify(b));
+               }
+               alert('Image is already in favorites')
+            }
+        
         })
-    }
-}
-createImages()
 
+    }
