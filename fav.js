@@ -1,4 +1,7 @@
+<<<<<<< HEAD
     
+=======
+>>>>>>> 8c31c6c8f112c59e69e81559e5c6c78a25f6d4b3
 let a = localStorage.getItem("Favorites");
 let b = JSON.parse(a);
 console.log(b);
@@ -32,11 +35,26 @@ for (let index = 0; index < b.length; index++) {
         span2.style.color = "red";
         let liv8 = b.find(b => b.name === id);
         if (liv8) {
+<<<<<<< HEAD
            b.shift(liv8);
            localStorage.setItem("Favorites", JSON.stringify(b));
           }
+=======
+           b.splice(index, 1);
+           localStorage.setItem("Favorites", JSON.stringify(b));
+           setTimeout(() => {
+        location.reload();
+           }, 3000);
+           
+
+        
+       }
+>>>>>>> 8c31c6c8f112c59e69e81559e5c6c78a25f6d4b3
 
     })
 }
 
+<<<<<<< HEAD
  
+=======
+>>>>>>> 8c31c6c8f112c59e69e81559e5c6c78a25f6d4b3

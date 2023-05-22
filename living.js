@@ -1,6 +1,13 @@
+<<<<<<< HEAD
 const input_element = document.querySelector("#items")
 
 let liv = [{
+=======
+const input_element = document.querySelector("#items");
+
+let liv = [
+  {
+>>>>>>> 8c31c6c8f112c59e69e81559e5c6c78a25f6d4b3
     name: "liv1",
     price: "150,000frs",
     location: "Bamenda",
@@ -65,6 +72,7 @@ let liv = [{
   },
 ];
 
+<<<<<<< HEAD
 for (let index = 0; index < liv.length; index++) {
     let names = liv[index].name;
     let div = input_element.appendChild(document.createElement("div"));
@@ -114,5 +122,63 @@ for (let index = 0; index < liv.length; index++) {
             }
         
         })
+=======
 
+  for (let index = 0; index < liv.length; index++) {
+    let names = liv[index].name;
+    let div = input_element.appendChild(document.createElement("div"));
+    //.appendChild(document.createElement('div'))
+    let div2 = div.appendChild(document.createElement("div"));
+    div.setAttribute("id", names);
+    div2.innerHTML = `<img src='${liv[index].image}' alt='profile'>`;
+    let span = document.createElement("span");
+    let h3 = document.createElement("h3");
+    let h2 = document.createElement("h3");
+    let h4 = document.createElement("h3");
+    h2.setAttribute("id", "price");
+    h2.innerHTML = `Price:${liv[index].price}`;
+    h3.innerHTML = ` location:${liv[index].location}`;
+    h4.innerHTML = `Shop Location:${liv[index].shop}  `;
+    // span.appendChild(document.createElement("ion-icon"));
+    let h44 = div2.insertAdjacentElement("afterend", h4);
+    let h32 = div2.insertAdjacentElement("afterend", h3);
+    let h22 = div2.insertAdjacentElement("afterend", h2);
+    let span2 = div2.insertAdjacentElement("afterend", span);
+    span2.setAttribute("id", names)
+    span2.innerHTML = `<ion-icon name="bookmark"></ion-icon>`;
+    div.classList.add("item");
+
+    span2.addEventListener("click", function (e) {
+        e.preventDefault();
+        let id = e.target.parentElement.id;
+        span2.style.color = "white";
+        console.log(id);
+       let liv8 = liv.find(liv => liv.name === id);
+       if (liv8) {
+        if (localStorage.getItem("Favorites") == null){
+            let favorites = [];
+            favorites.push(liv8);
+        localStorage.setItem('Favorites', JSON.stringify(favorites));
+>>>>>>> 8c31c6c8f112c59e69e81559e5c6c78a25f6d4b3
+
+        
+       }
+       else {
+       let a = localStorage.getItem('Favorites')
+       let b = JSON.parse(a)
+        b.push(liv8);
+        localStorage.setItem('Favorites', JSON.stringify(b));
+       }
     }
+<<<<<<< HEAD
+=======
+        
+    })
+    
+}
+
+
+
+
+
+>>>>>>> 8c31c6c8f112c59e69e81559e5c6c78a25f6d4b3
